@@ -1,0 +1,11 @@
+.clients{
+    justify-content: space-between;
+}
+.clients img{
+    width: 10%;
+}
+@media (max-width:500px) {
+    .clients img{
+        width: 20%;  
+    }  
+}

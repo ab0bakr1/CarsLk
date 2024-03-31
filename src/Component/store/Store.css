@@ -1,0 +1,38 @@
+.Categroy{
+    padding-right: 10px;
+    border-right: 1px solid #3C3C3C;
+    position: sticky;
+    top: 10vh;
+}
+.buy{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 200%;
+    background-color: #232323;
+    height: 400px;
+    width: 300px;
+    z-index: 900;
+    opacity: 1;
+    transition: 0.4s ease-in-out;
+}
+.buy label{
+    color: #fff;
+}
+.buy input{
+    border-color: rgb(255, 255, 255);
+    background-color: #e7e7e71d;
+    color: #fff;
+}
+.buy h6{
+    color: #0074D9;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+@media (max-width:995px) {
+    .Categroy{
+        border-right: none !important; 
+        border-bottom: 1px solid #3C3C3C;
+        margin-bottom: 20px;
+    }
+}

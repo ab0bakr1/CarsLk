@@ -1,0 +1,303 @@
+[
+    {
+        "id": 1,
+        "make": "Mercedes",
+        "model": "ML250",
+        "year": "2014",
+        "price": "$53,000",
+        "CarImg":"https://www.cars.com/i/large/in/v2/stock_photos/0e13a462-f6ac-45a0-9a91-b51151388344/e25310e4-bd77-416a-9ce4-0a8972840166.png",
+        "color": "white",
+        "filter":["white","2014","Mercedes"]
+    },
+    {
+        "id": 2,
+        "make": "Mercedes",
+        "model": "SLR",
+        "year": "2016",
+        "price": "$85,800",
+        "CarImg":"https://w7.pngwing.com/pngs/643/901/png-transparent-white-mercedes-benz-coupe-mercedes-benz-sls-amg-car-mercedes-benz-s-class-mercedes-benz-e-class-white-mercedes-benz-s63-amg-car-compact-car-sedan-mercedesbenz-sclass-thumbnail.png",
+        "color":"white",
+        "filter":["white","2016","Mercedes"]
+    },
+    {
+        "id": 3,
+        "make": "JEEP",
+        "model": "Grand Cherokee",
+        "year": "2020",
+        "price": "$45,000",
+        "CarImg":"https://w7.pngwing.com/pngs/295/665/png-transparent-black-jeep-grand-cherokee-suv-2017-jeep-grand-cherokee-2018-jeep-grand-cherokee-trackhawk-sport-utility-vehicle-black-jeep-grand-cherokee-car-vehicle-transport-rim-thumbnail.png",
+        "color":"black",
+        "filter":["black","2020","JEEP"]
+    },
+    {
+        "id": 4,
+        "make": "Toyota",
+        "model": "Fortuner",
+        "year": "2023",
+        "price": "$65,800",
+        "CarImg":"https://w7.pngwing.com/pngs/859/326/png-transparent-car-toyota-fortuner-trd-sportivo-auto-show-car-glass-headlamp-car-thumbnail.png",
+        "color":"white",
+        "filter":["white","2023","Toyota"]
+    },
+    {
+        "id": 5,
+        "make": "Hyundai",
+        "model": "Tucson",
+        "year": "2016",
+        "price": "$54,300",
+        "CarImg":"https://w7.pngwing.com/pngs/1003/115/png-transparent-hyundai-motor-company-sport-utility-vehicle-hyundai-tucson-car-suv-cars-thumbnail.png",
+        "color":"blue",
+        "filter":["blue","2016","Hyundai"]
+    },
+    {
+        "id": 6,
+        "make": "Toyota",
+        "model": "Hilux",
+        "year": "2022",
+        "price": "$35,000",
+        "CarImg":"https://w7.pngwing.com/pngs/1011/424/png-transparent-toyota-hilux-car-pickup-truck-ute-toyota-truck-car-pickup-truck-thumbnail.png",
+        "color":"red",
+        "filter":["red","2022","Toyota"]
+    },
+    {
+        "id": 7,
+        "make": "Toyota",
+        "model": "Corolla",
+        "year": "2019",
+        "price": "$45,000",
+        "CarImg":"https://w7.pngwing.com/pngs/662/117/png-transparent-infiniti-car-toyota-corolla-luxury-vehicle-car-compact-car-sedan-car-thumbnail.png",
+        "color":"black",
+        "filter":["black","2019","Toyota"]
+    },
+    {
+        "id": 8,
+        "make": "Toyota",
+        "model": "HiAce",
+        "year": "2016",
+        "price": "$22,800",
+        "CarImg":"https://w7.pngwing.com/pngs/922/806/png-transparent-white-toyota-hi-ace-van-toyota-hiace-van-bus-car-bench-compact-car-driving-mode-of-transport-thumbnail.png",
+        "color":"white",
+        "filter":["white","2016","Toyota"]
+    },
+    {
+        "id": 9,
+        "make": "Toyota",
+        "model": "Avanza",
+        "year": "2018",
+        "price": "$33,100",
+        "CarImg":"https://w7.pngwing.com/pngs/140/390/png-transparent-toyota-avanza-car-minivan-toyota-fortuner-toyota-compact-car-car-mode-of-transport-thumbnail.png",
+        "color":"black",
+        "filter":["black","2018","Toyota"]
+    },
+    {
+        "id": 10,
+        "make": "Mercedes",
+        "model": "CLA",
+        "year": "2018",
+        "price": "$45,800",
+        "CarImg":"https://w7.pngwing.com/pngs/578/542/png-transparent-red-mercedes-benz-sedan-mercedes-benz-cla-class-car-audi-a3-mercedes-benz-c-class-red-mercedes-benz-cla-car-compact-car-sedan-performance-car-thumbnail.png",
+        "color":"red",
+        "filter":["red","2018","Mercedes"]
+    },
+    {
+        "id": 11,
+        "make": "Audi",
+        "model": "RS7",
+        "year": "2017",
+        "price": "$70,000",
+        "CarImg":"https://w7.pngwing.com/pngs/812/565/png-transparent-audi-rs7-audi-r8-audi-quattro-audi-rs-6-audi-sedan-car-performance-car-thumbnail.png",
+        "color":"red",
+        "filter":["red","2017","Audi"]
+    },
+    {
+        "id": 12,
+        "make": "Hyundai",
+        "model": "I30",
+        "year": "2020",
+        "price": "$30,300",
+        "CarImg":"https://w7.pngwing.com/pngs/28/688/png-transparent-tata-tiago-tata-motors-car-hyundai-car-compact-car-sedan-car-thumbnail.png",
+        "color":"blue",
+        "filter":["blue","2020","Hyundai"]
+    },
+    {
+        "id": 13,
+        "make": "Toyota",
+        "model": "Prado",
+        "year": "2023",
+        "price": "$85,800",
+        "CarImg":"https://w7.pngwing.com/pngs/471/493/png-transparent-toyota-land-cruiser-prado-car-2015-toyota-land-cruiser-toyota-4runner-prado-glass-off-road-vehicle-vehicle-thumbnail.png",
+        "color":"black",
+        "filter":["black","2023","Toyota"]
+    },
+    {
+        "id": 14,
+        "make": "Toyota",
+        "model": "Land cruiser",
+        "year": "2022",
+        "price": "$85,000",
+        "CarImg":"https://w7.pngwing.com/pngs/775/15/png-transparent-toyota-land-cruiser-prado-2018-toyota-land-cruiser-toyota-4runner-car-toyota-glass-dark-vehicle-thumbnail.png",
+        "color":"black",
+        "filter":["black","2022","Toyota"]
+    },
+    {
+        "id": 15,
+        "make": "Mercedes",
+        "model": "G500",
+        "year": "2020",
+        "price": "$100,000",
+        "CarImg":"https://w7.pngwing.com/pngs/150/977/png-transparent-2017-mercedes-benz-g-class-2016-mercedes-benz-g-class-car-2018-mercedes-benz-g-class-mercedes-benz-car-expert-vehicle-thumbnail.png",
+        "color":"black",
+        "filter":["black","2020","Mercedes"]
+    },
+    {
+        "id": 16,
+        "make": "Chevrolet",
+        "model": "Aveo",
+        "year": "2017",
+        "price": "$15,800",
+        "CarImg":"https://w7.pngwing.com/pngs/276/472/png-transparent-chevrolet-aveo-chevrolet-spark-car-chevrolet-sonic-chevrolet-compact-car-sedan-car-thumbnail.png",
+        "color":"red",
+        "filter":["red","2017","Chevrolet"]
+    },
+    {
+        "id": 17,
+        "make": "Tesla",
+        "model": "S",
+        "year": "2020",
+        "price": "$76,200",
+        "CarImg":"https://w7.pngwing.com/pngs/711/596/png-transparent-tesla-model-s-tesla-motors-car-tesla-model-x-tesla-compact-car-sedan-headlamp-thumbnail.png",
+        "color":"white",
+        "filter":["white","2020","Tesla"]
+    },
+    {
+        "id": 18,
+        "make": "BMW",
+        "model": "X6",
+        "year": "2023",
+        "price": "$85,800",
+        "CarImg":"https://w7.pngwing.com/pngs/318/22/png-transparent-black-bmw-sedan-bmw-x6-car-bmw-x7-bmw-1-series-bmw-x6-compact-car-convertible-vehicle-thumbnail.png",
+        "color":"black",
+        "filter":["black","2023","BMW"]
+    },
+    {
+        "id": 19,
+        "make": "Mercedes",
+        "model": "S550",
+        "year": "2015",
+        "price": "$50,200",
+        "CarImg":"https://w7.pngwing.com/pngs/223/220/png-transparent-mercedes-benz-e-class-luxury-vehicle-car-2014-mercedes-benz-s-class-mercedes-compact-car-sedan-car-thumbnail.png",
+        "color":"black",
+        "filter":["black","2015","Mercedes"]
+    },
+    {
+        "id": 20,
+        "make": "Chevrolet",
+        "model": "Camaro",
+        "year": "2010",
+        "price": "$76,200",
+        "CarImg":"https://w7.pngwing.com/pngs/637/293/png-transparent-chevrolet-camaro-car-general-motors-chevrolet-tahoe-yellow-car-car-performance-car-vehicle-thumbnail.png",
+        "color":"yellow",
+        "filter":["yellow","2010","Chevrolet"]
+    },
+    {
+        "id": 21,
+        "make": "Honda",
+        "model": "Civic EX-T",
+        "year": "2018",
+        "price": "$40,700",
+        "CarImg":"https://w7.pngwing.com/pngs/79/659/png-transparent-2016-honda-civic-ex-t-sedan-car-2018-honda-civic-sedan-2017-honda-civic-sport-honda-compact-car-glass-sedan-thumbnail.png",
+        "color":"silver",
+        "filter":["silver","2018","Honda"]
+    },
+    {
+        "id": 22,
+        "make": "Lexus",
+        "model": "LX",
+        "year": "2019",
+        "price": "$70,000",
+        "CarImg":"https://w7.pngwing.com/pngs/346/446/png-transparent-2018-lexus-lx-sport-utility-vehicle-toyota-lexus-is-lexus-lx-car-vehicle-metal-thumbnail.png",
+        "color":"white",
+        "filter":["white","2019","Lexus"]
+    },
+    {
+        "id": 23,
+        "make": "Ford",
+        "model": "Ka",
+        "year": "2020",
+        "price": "$28,900",
+        "CarImg":"https://w7.pngwing.com/pngs/295/106/png-transparent-ford-ka-car-ford-motor-company-ford-compact-car-sedan-car-thumbnail.png",
+        "color":"white",
+        "filter":["white","2020","Ford"]
+    },
+    {
+        "id": 24,
+        "make": "Toyota",
+        "model": " Prado",
+        "year": "2022",
+        "price": "$55,200",
+        "CarImg":"https://w7.pngwing.com/pngs/767/862/png-transparent-toyota-land-cruiser-prado-car-lexus-gx-sport-utility-vehicle-toyota-glass-car-off-road-vehicle-thumbnail.png",
+        "color":"red",
+        "filter":["red","2021","Toyota"]
+    },
+    {
+        "id": 25,
+        "make": "Cadillac",
+        "model": "Escalade ESV",
+        "year": "2017",
+        "price": "$50,000",
+        "CarImg":"https://w7.pngwing.com/pngs/961/38/png-transparent-2018-cadillac-escalade-esv-car-general-motors-vehicle-cadillac-compact-car-glass-driving-thumbnail.png",
+        "color":"black",
+        "filter":["black","2017","Cadillac"]
+    },
+    {
+        "id": 26,
+        "make": "Hyundai",
+        "model": "Elantra SE",
+        "year": "2017",
+        "price": "$37,000",
+        "CarImg":"https://w7.pngwing.com/pngs/552/195/png-transparent-2018-hyundai-elantra-se-automatic-sedan-car-latest-hyundai-compact-car-sedan-car-thumbnail.png",
+        "color":"red",
+        "filter":["red","2017","Hyundai"]
+    },
+    {
+        "id": 27,
+        "make": "Hyundai",
+        "model": "Tucson",
+        "year": "2009",
+        "price": "$76,200",
+        "CarImg":"https://w7.pngwing.com/pngs/197/163/png-transparent-2009-hyundai-tucson-car-2006-hyundai-tucson-2005-hyundai-tucson-hyundai-compact-car-car-windshield-thumbnail.png",
+        "color":"white",
+        "filter":["white","2009","Hyundai"]
+    },
+    {
+        "id": 28,
+        "make": "Land-Rover",
+        "model": "Velar P250 S",
+        "year": "2018",
+        "price": "$70,200",
+        "CarImg":"https://w7.pngwing.com/pngs/1003/886/png-transparent-2018-land-rover-range-rover-velar-d180-s-suv-2018-land-rover-range-rover-velar-p250-s-suv-car-landrover-compact-car-car-automatic-transmission-thumbnail.png",
+        "color":"white",
+        "filter":["white","2018","Land-Rover"]
+    },
+    {
+        "id": 29,
+        "make": "Ford",
+        "model": "Mustang",
+        "year": "2017",
+        "price": "$56,200",
+        "CarImg":"https://w7.pngwing.com/pngs/258/287/png-transparent-2015-ford-mustang-2018-ford-mustang-2016-ford-mustang-car-tuning-car-performance-car-vehicle-thumbnail.png",
+        "color":"red",
+        "filter":["red","2017","Ford"]
+    },
+    {
+        "id": 30,
+        "make": "Rolls-Royce",
+        "model": "Ghost",
+        "year": "2012",
+        "price": "$95,500",
+        "CarImg":"https://w7.pngwing.com/pngs/114/820/png-transparent-rolls-royce-ghost-rolls-royce-phantom-vii-bentley-continental-flying-spur-bentley-compact-car-sedan-car-thumbnail.png",
+        "color":"black",
+        "filter":["black","2012","Rolls-Royce"]
+    }
+
+]

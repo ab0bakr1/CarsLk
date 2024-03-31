@@ -1,0 +1,47 @@
+.carousel{
+    background-color: #797979;
+}
+.hero-img{
+    margin-inline: 200px;
+    width: 80%;
+    height: 90vh;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon{
+    height: 5rem!important;
+    width: 5rem!important;
+}
+.carousel-control-next,
+.carousel-control-prev{
+    width: 10%!important;
+}
+.carousel-caption h3{
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.carousel-caption p{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.carousel-indicators{
+    gap: 20px;
+}
+.carousel-indicators [data-bs-target]{
+    background-color: #0074D9!important;
+}
+@media (max-width:992px) {
+    .hero-img{
+        margin-inline: 90px;
+        width: 60%;
+        height: 90vh;
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon{
+    height: 5rem!important;
+    width: 5rem!important;
+    }
+    .carousel-control-next,
+    .carousel-control-prev{
+        width: 10%!important;
+    }
+}

@@ -1,0 +1,139 @@
+.user{
+    z-index: 101;
+    border: 0;
+    background-color: transparent;
+}
+.user-img{
+    position: relative;
+    width: 50px;
+    border-radius: 50px;
+    height: 50px;
+    border: 2px solid #00000035;
+    align-self: center;
+    margin: auto;
+}
+.user-img img{
+    width: 100%;
+    border-radius: inherit;
+}
+.user-name h6{
+    margin: 0;
+    color: #0074D9;
+}
+.login{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: -600%;
+    background-color: #232323;
+    width: 300px;
+    z-index: 900;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+.login input{
+    border-color: rgb(255, 255, 255);
+    background-color: #e7e7e71d;
+    color: #fff;
+    margin-top:15px ;
+    margin-bottom: 30px;
+}
+.login button{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255);
+    background-color: #0074D9;
+    color: #fff;
+}
+.login h6{
+    color: #0074D9;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.login p{
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.login p a{
+    color: #0074D9;
+    cursor: pointer;
+    text-decoration: none;
+}
+.overlay.active{
+    display: block;
+    position:fixed;
+    z-index:100;
+    left:0;
+    top:0;
+    background:#000000ce;
+    height:100%;
+    width: 100%;
+}
+.login.active{
+    top: 200%;
+    opacity: 1;
+}
+
+.signUp{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: -600%;
+    background-color: #232323;
+    width: 300px;
+    z-index: 900;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+.signUp input{
+    border-color: rgb(255, 255, 255);
+    background-color: #e7e7e71d;
+    color: #fff;
+    margin-top:15px ;
+    margin-bottom: 30px;
+}
+.signUp button{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255);
+    background-color: #0074D9;
+    color: #fff;
+}
+.signUp h6{
+    color: #0074D9;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.signUp p{
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.signUp p a{
+    color: #0074D9;
+    cursor: pointer;
+    text-decoration: none;
+}
+.overlay.active{
+    display: block;
+    position:fixed;
+    z-index:100;
+    left:0;
+    top:0;
+    background:#000000ce;
+    height:100%;
+    width: 100%;
+}
+.signUp.active{
+    top: 200%;
+    opacity: 1;
+}

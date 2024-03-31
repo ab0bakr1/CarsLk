@@ -1,0 +1,22 @@
+.card-img{
+    border-radius: 0;
+}
+.card-item h5{
+    color:#0074D9 ;
+}
+.item-fav-btn{
+    background-color: white;
+}
+.card-item svg{
+    color:#0074D9 ;
+    font-size: 30px;
+    cursor: pointer;
+}
+.card-btn{
+    background-color: #0074D9;
+    color: aliceblue;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 10px;
+}

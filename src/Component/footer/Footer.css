@@ -1,0 +1,43 @@
+.footer-company img{
+    width: 10%;
+}
+.footer-company h6{
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.footer-contact h4{
+    color: white;
+    text-transform: capitalize;
+}
+.footer-contact a{
+    color:#262626;
+    font-size: 20px;
+    text-decoration: none;
+}
+.footer-contact span{
+    color:#0074D9;
+    font-size: 20px;
+    text-decoration: none;
+}
+.NEWSLETTER h4{
+    color: white;
+    text-transform: capitalize;
+}
+.NEWSLETTER input{
+    border-color: rgb(255, 255, 255);
+    background-color: #e7e7e71d;
+    color: #fff;
+}
+.footer-1{
+    border-bottom: 1px solid #3C3C3C;
+}
+@media (max-width:995px) {
+    .footer-company,
+    .footer-contact,
+    .footer-1,
+    .NEWSLETTER{
+        align-items: center;
+    }
+}

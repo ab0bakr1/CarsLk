@@ -1,0 +1,13 @@
+.colors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    column-gap: 50px;
+}
+.color-icon{
+    border-radius: 50px;
+    height: 20px;
+    width: 20px;
+    border: 1px #00000035 solid;
+}

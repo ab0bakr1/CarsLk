@@ -1,0 +1,16 @@
+.Years{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    column-gap: 90px;
+}
+@media (max-width:995px) {
+    .Years{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        column-gap: 5px;
+        margin-bottom: 20px;
+    }
+}

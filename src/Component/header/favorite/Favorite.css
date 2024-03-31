@@ -1,0 +1,31 @@
+.Favorite{
+    font-size: 50px;
+    position: relative;
+    z-index: 101;
+}
+.fav-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(42, 165, 87);
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    top: 0px;
+    right:0px;
+    transform: translate(25%,25%);
+    color: #fff;
+}
+.Fav-btn{
+    border: none;
+    background-color: transparent;
+}
+.Fav-img{
+    width:6rem !important ;
+    height: 4rem !important;
+}
+.fav-price{
+    font-weight: bold;
+    color: #0074D9;
+}
