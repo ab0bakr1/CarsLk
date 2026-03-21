@@ -1,31 +1,62 @@
-.Favorite{
-    font-size: 50px;
+/* Favorite.css */
+
+/* زر المفضلة في الهيدر */
+.favorite-wrapper {
     position: relative;
-    z-index: 101;
+    display: inline-block;
 }
-.fav-number{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(42, 165, 87);
+
+.fav-btn-custom {
+    color: #333;
+    font-size: 1.5rem;
+    transition: transform 0.2s ease;
+    padding: 0;
+    text-decoration: none !important;
+}
+
+.fav-btn-custom:hover {
+    transform: scale(1.1);
+    color: #dc3545; /* يتحول للأحمر عند التحويم */
+}
+
+.fav-badge {
     position: absolute;
-    width: 25px;
-    height: 25px;
-    font-size: 20px;
-    top: 0px;
-    right:0px;
-    transform: translate(25%,25%);
-    color: #fff;
+    top: -5px;
+    right: -10px;
+    font-size: 0.65rem;
+    padding: 0.4em 0.6em;
+    border: 2px solid #fff; /* يعطي شكل جمالي فوق الأيقونة */
 }
-.Fav-btn{
-    border: none;
-    background-color: transparent;
+
+/* بطاقة السيارة داخل القائمة */
+.fav-item-card {
+    background: #f8f9fa;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
 }
-.Fav-img{
-    width:6rem !important ;
-    height: 4rem !important;
+
+.fav-item-card:hover {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
 }
-.fav-price{
-    font-weight: bold;
-    color: #0074D9;
+
+.fav-img-styled {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.item-price {
+    font-size: 0.9rem;
+}
+
+.fav-offcanvas {
+    width: 400px !important; /* عرض أكبر قليلاً لراحة العين */
 }
