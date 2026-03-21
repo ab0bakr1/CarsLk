@@ -1,19 +1,30 @@
-import { faHeart } from '@fortawesome/free-regular-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
-import "./Favorite.css"
-import { useShoppingFav } from '../../../context/ShoppingFavContext'
+// Favorite.js
+import { faHeart } from '@fortawesome/free-solid-svg-icons'; // استخدام solid يعطي انطباعاً أقوى
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import { Badge, Button } from 'react-bootstrap';
+import "./Favorite.css";
+import { useShoppingFav } from '../../../context/ShoppingFavContext';
 
 function Favorite() {
-  const {openFav,FavQuantity} = useShoppingFav();
+  const { openFav, FavQuantity } = useShoppingFav();
+  
   return (
-    <div className='Favorite'>
-        <button className='Fav-btn' onClick={openFav}><FontAwesomeIcon icon={faHeart} style={{color: "#0074D9",}} /></button>
-        <div className='fav-number rounded-circle'>
-          {FavQuantity}
-        </div>
+    <div className='favorite-wrapper'>
+      <Button 
+        variant="link" 
+        className='fav-btn-custom' 
+        onClick={openFav}
+      >
+        <FontAwesomeIcon icon={faHeart} />
+        {FavQuantity > 0 && (
+          <Badge pill bg="danger" className="fav-badge">
+            {FavQuantity}
+          </Badge>
+        )}
+      </Button>
     </div>
-  )
+  );
 }
 
-export default Favorite
+export default Favorite;
