@@ -23,3 +23,4 @@ const FavCart = ({isOpen}) => {
     </Offcanvas>
   );
 };
+export default FavCart
