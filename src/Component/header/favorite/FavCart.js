@@ -1,4 +1,9 @@
 // FavCart.js
+import React from 'react'
+import { Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle } from 'react-bootstrap'
+import FavItem from './FavItem';
+import { useShoppingFav } from '../../../context/ShoppingFavContext';
+
 const FavCart = ({isOpen}) => {
   const {FavItems, closeFav} = useShoppingFav();
   return (
