@@ -1,5 +1,5 @@
 import { useContext, createContext, useState, useEffect } from "react";
-import FavCart from "../Component/header/favorite/FavCart";
+import FavCart from "../../Component/header/favorite/FavCart";
 const ShppingFavContext = createContext({});
 
 const initialFavItem = localStorage.getItem("fav")
