@@ -1,4 +1,9 @@
 // FavItem.js
+import React from 'react'
+import { Button, Stack } from 'react-bootstrap'
+import StoreItems from "../../../Data/AllCars.json"
+import { useShoppingFav } from '../../../context/ShoppingFavContext';
+
 const FavItem = ({id}) => {
     const {decreaseFavQuantity} = useShoppingFav();
     const item = StoreItems.find((i)=> i.id === id);
@@ -29,3 +34,4 @@ const FavItem = ({id}) => {
         </Stack>
     )
 }
+export default FavItem
