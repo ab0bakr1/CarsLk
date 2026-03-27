@@ -1,47 +1,50 @@
-import React, { useState } from 'react';
-import { Card, CardImg } from 'react-bootstrap';
-import "./CarsItem.css"
+// CarsItem.jsx
+import React from 'react';
+import { Card, Button, Badge } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as faHeartSolid, faGasPump, faCogs } from '@fortawesome/free-solid-svg-icons';
 import { useShoppingFav } from "../../context/ShoppingFavContext";
-import { faHeartCircleCheck, faX } from '@fortawesome/free-solid-svg-icons';
+import "./Store.css";
 
-const CarsItem = ({ id, CarImg, make, model, price, year}) => {
-  const { increaseFavQuantity,FavItems,decreaseFavQuantity} = useShoppingFav();
-  const [Overlay, setOverlay] = useState("overlay");
-  const [BuyMenu , setBuyMenu] = useState("Buy-menu");
-  const Buy =() =>{
-    BuyMenu === "Buy-menu" ? setBuyMenu("Buy-menu active") : setBuyMenu("Buy-menu");
-    Overlay === "overlay" ? setOverlay("overlay active") : setOverlay("overlay");
-  }
-  const FavChecker = (id) =>{
-    const boolean = FavItems.some((item) => item.id === id);
-    return boolean;
-  };
+const CarsItem = ({ id, CarImg, make, model, price, year }) => {
+  const { increaseFavQuantity, FavItems, decreaseFavQuantity } = useShoppingFav();
+  
+  const isFav = FavItems.some((item) => item.id === id);
+
   return (
-    <>
-    <Card className='border-0'>
-        <CardImg src={CarImg} className='card-img' variant="top" style={{height:"200px",objectFit:"contain"}} />
-        <Card.Body>
-            <div className='d-flex justify-content-between align-items-center'>
-                <h5>{make}</h5>
-                <h6><strong>Model:</strong>{model}</h6>
-                <h5>{year}</h5>
-            </div>
-            <div className="card-item d-flex justify-content-between align-items-center gap-4">
-                <button onClick={Buy} className='card-btn w-100'>Buy now</button>
-                {FavChecker(id) ? (
-                  <button className='border-0 item-fav-btn' onClick={() => decreaseFavQuantity(id)}><FontAwesomeIcon  icon={faHeartCircleCheck} /></button>
-                  ):( 
-                  <button className='border-0 item-fav-btn' onClick={() => increaseFavQuantity(id)}><FontAwesomeIcon  icon={faHeart} /></button>
-                  )}
-                <h5 className='py-1 m-0'>{price}</h5>
-            </div>
-        </Card.Body>
+    <Card className='car-card border-0 shadow-sm h-100'>
+      <div className="car-img-container">
+        <Card.Img src={CarImg} className='car-card-img' />
+        <Button 
+          variant="light" 
+          className={`fav-floating-btn ${isFav ? 'active' : ''}`}
+          onClick={() => isFav ? decreaseFavQuantity(id) : increaseFavQuantity(id)}
+        >
+          <FontAwesomeIcon icon={isFav ? faHeartSolid : faHeart} />
+        </Button>
+      </div>
+
+      <Card.Body className="d-flex flex-column">
+        <div className="d-flex justify-content-between mb-2">
+          <Badge bg="primary-soft" className="car-year-badge">{year}</Badge>
+          <span className="car-price-tag">{price}</span>
+        </div>
+        
+        <Card.Title className="fw-bold mb-3">{make} {model}</Card.Title>
+        
+        {/* إضافة تفاصيل تقنية تعطي شكلاً احترافياً */}
+        <div className="car-specs d-flex gap-3 mb-4 text-muted small">
+          <span><FontAwesomeIcon icon={faGasPump} className="me-1"/> Hybrid</span>
+          <span><FontAwesomeIcon icon={faCogs} className="me-1"/> Automatic</span>
+        </div>
+
+        <Button variant="primary" className='w-100 buy-btn mt-auto py-2 fw-bold'>
+          Rent Now
+        </Button>
+      </Card.Body>
     </Card>
-    </>
-    
-  )
+  );
 }
 
-export default CarsItem
+export default CarsItem;

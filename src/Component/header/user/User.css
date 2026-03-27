@@ -1,139 +1,70 @@
-.user{
-    z-index: 101;
-    border: 0;
-    background-color: transparent;
-}
-.user-img{
-    position: relative;
-    width: 50px;
-    border-radius: 50px;
-    height: 50px;
-    border: 2px solid #00000035;
-    align-self: center;
-    margin: auto;
-}
-.user-img img{
-    width: 100%;
-    border-radius: inherit;
-}
-.user-name h6{
-    margin: 0;
-    color: #0074D9;
-}
-.login{
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-    top: -600%;
-    background-color: #232323;
-    width: 300px;
-    z-index: 900;
-    opacity: 0;
-    transition: 0.4s ease-in-out;
-}
-.login input{
-    border-color: rgb(255, 255, 255);
-    background-color: #e7e7e71d;
-    color: #fff;
-    margin-top:15px ;
-    margin-bottom: 30px;
-}
-.login button{
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    border-radius: 5px;
-    border-color: rgb(255, 255, 255);
-    background-color: #0074D9;
-    color: #fff;
-}
-.login h6{
-    color: #0074D9;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-.login p{
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-align: center;
-}
-.login p a{
-    color: #0074D9;
+/* User.css */
+
+.user-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     cursor: pointer;
-    text-decoration: none;
-}
-.overlay.active{
-    display: block;
-    position:fixed;
-    z-index:100;
-    left:0;
-    top:0;
-    background:#000000ce;
-    height:100%;
-    width: 100%;
-}
-.login.active{
-    top: 200%;
-    opacity: 1;
+    padding: 5px 12px;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+    border: 1px solid transparent;
 }
 
-.signUp{
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-    top: -600%;
-    background-color: #232323;
-    width: 300px;
-    z-index: 900;
-    opacity: 0;
-    transition: 0.4s ease-in-out;
+.user-trigger:hover {
+    background-color: #f0f7ff;
+    border-color: #0074D9;
 }
-.signUp input{
-    border-color: rgb(255, 255, 255);
-    background-color: #e7e7e71d;
-    color: #fff;
-    margin-top:15px ;
-    margin-bottom: 30px;
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #0074D9;
 }
-.signUp button{
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    border-radius: 5px;
-    border-color: rgb(255, 255, 255);
-    background-color: #0074D9;
-    color: #fff;
-}
-.signUp h6{
-    color: #0074D9;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-.signUp p{
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-align: center;
-}
-.signUp p a{
-    color: #0074D9;
-    cursor: pointer;
-    text-decoration: none;
-}
-.overlay.active{
-    display: block;
-    position:fixed;
-    z-index:100;
-    left:0;
-    top:0;
-    background:#000000ce;
-    height:100%;
+
+.user-avatar img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.signUp.active{
-    top: 200%;
-    opacity: 1;
+
+.user-info-text h6 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: capitalize;
+}
+
+/* Modal Styling */
+.user-modal .modal-content {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+}
+
+.user-modal .form-control {
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #eee;
+}
+
+.user-modal .form-control:focus {
+    box-shadow: 0 0 0 3px rgba(0, 116, 217, 0.1);
+    border-color: #0074D9;
+}
+
+.user-modal .btn-primary {
+    background-color: #0074D9;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.user-modal .btn-primary:hover {
+    transform: translateY(-2px);
+    background-color: #0056a3;
 }

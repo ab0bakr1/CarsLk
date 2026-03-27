@@ -1,43 +1,99 @@
-.footer-company img{
-    width: 10%;
+/* Footer.css */
+
+.main-footer {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    padding-top: 80px;
+    font-family: 'Inter', sans-serif;
 }
-.footer-company h6{
-    color: white;
-    font-size: 30px;
+
+.footer-img {
+    width: 45px;
+    height: auto;
+}
+
+.footer-text {
+    color: #a0a0a0;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.footer-title {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 25px;
     text-transform: uppercase;
-    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
 }
-.footer-contact h4{
-    color: white;
-    text-transform: capitalize;
+
+/* تنسيق الروابط */
+.footer-links li {
+    margin-bottom: 12px;
 }
-.footer-contact a{
-    color:#262626;
-    font-size: 20px;
+
+.footer-links a {
+    color: #a0a0a0;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
-.footer-contact span{
-    color:#0074D9;
-    font-size: 20px;
-    text-decoration: none;
+
+.footer-links a:hover {
+    color: #0074D9;
+    padding-left: 8px; /* حركة بسيطة عند التحويم */
 }
-.NEWSLETTER h4{
+
+/* أيقونات التواصل الاجتماعي */
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
     color: white;
-    text-transform: capitalize;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
-.NEWSLETTER input{
-    border-color: rgb(255, 255, 255);
-    background-color: #e7e7e71d;
-    color: #fff;
+
+.social-icons a:hover {
+    background: #0074D9;
+    transform: translateY(-5px);
 }
-.footer-1{
-    border-bottom: 1px solid #3C3C3C;
+
+/* النشرة البريدية */
+.newsletter-form .form-control {
+    border-radius: 8px;
+    padding: 12px;
 }
-@media (max-width:995px) {
-    .footer-company,
-    .footer-contact,
-    .footer-1,
-    .NEWSLETTER{
-        align-items: center;
+
+.newsletter-form .btn {
+    border-radius: 8px;
+    padding: 0 20px;
+}
+
+.copyright {
+    font-size: 0.9rem;
+}
+
+.dev-socials a:hover {
+    color: #0074D9 !important;
+}
+
+/* الموبايل */
+@media (max-width: 991px) {
+    .main-footer {
+        padding-top: 50px;
+        text-align: center;
+    }
+    
+    .footer-about, .footer-links, .contact-details, .newsletter-form {
+        margin-bottom: 20px;
+    }
+
+    .footer-logo, .social-icons, .contact-details li {
+        justify-content: center;
     }
 }

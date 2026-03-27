@@ -1,16 +1,54 @@
-.Years{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    row-gap: 20px;
-    column-gap: 90px;
+/* Year.css */
+
+.year-filter-container {
+    padding: 10px 0;
 }
-@media (max-width:995px) {
-    .Years{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        column-gap: 5px;
-        margin-bottom: 20px;
+
+.years-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية */
+    gap: 10px;
+}
+
+.year-chip {
+    border: 1px solid #eee;
+    background-color: #fff;
+    color: #555;
+    padding: 8px 5px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.year-chip:hover {
+    border-color: #0074D9;
+    color: #0074D9;
+    background-color: #f0f7ff;
+    transform: translateY(-2px);
+}
+
+/* نمط الزر عند اختياره (اختياري إذا أردت تمييزه) */
+.year-chip:focus {
+    background-color: #0074D9;
+    color: #fff;
+    border-color: #0074D9;
+    box-shadow: 0 4px 10px rgba(0, 116, 217, 0.2);
+}
+
+.all-btn {
+    grid-column: span 3; /* زر "الكل" يأخذ العرض كاملاً */
+    background-color: #f8f9fa;
+    margin-bottom: 5px;
+}
+
+/* تعديلات الشاشات الصغيرة */
+@media (max-width: 992px) {
+    .years-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 أعمدة لتوفير المساحة الطولية */
+    }
+    .all-btn {
+        grid-column: span 4;
     }
 }

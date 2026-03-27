@@ -1,63 +1,97 @@
-import React from 'react'
-import { Container, Row } from 'react-bootstrap'
-import logo from "../../IMG/logo.png"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faInstagram, faLinkedin, faSquareFacebook, faSquareGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons'
-import "./Footer.css"
+import React from 'react';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import logo from "../../IMG/logo.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faXTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import "./Footer.css";
 
 const Footer = () => {
-  return (
-    <footer style={{backgroundColor:"#080808", paddingTop:"40px"}}>
-        <Container>
-          <Row lg={3} md={1} sm={1} className='footer-1 pb-5'>
-            <div className='footer-company d-flex flex-column gap-3 pe-lg-5'>
-              <div className='d-flex align-items-center gap-3'>
-                <img src={logo}></img>
-                <h6>Carslk</h6>
-              </div>
-              <h5>Car rental has never been easier. With our company, you can book your car online, phone or app</h5>
-              <div className='social d-flex fs-2 gap-4'>
-                <FontAwesomeIcon icon={faFacebook} style={{color: "#ffffff",}} />
-                <FontAwesomeIcon icon={faInstagram} style={{color: "#ffffff",}} />
-                <FontAwesomeIcon icon={faXTwitter} style={{color: "#ffffff",}} />
-              </div>
-            </div>
-            <div className='footer-contact d-flex justify-content-center gap-lg-5 gap-2 pt-2'>
-              <div className='col-3'>
-                <h4 className='fs-3'>links</h4>
-                <a href="#">About Us</a><br/>
-                <a href="#">Contact us</a><br/>
-                <a href="#">All Cars</a><br/>
-              </div>
-              <div className='col-9'>
-                <h4 className='fs-3'>contact info</h4>
-                <h6 className='fs-5'><span>Email:</span> info@carslk.com</h6>
-                <h6 className='fs-5'><span>Phone:</span> +96666666666</h6>
-                <h6 className='fs-5'><span>Address:</span> 1234 Woo, Lodo, United States</h6>
-              </div>
-            </div>
-            <div className='NEWSLETTER pt-2 text-center'>
-              <h4 className='fs-3'>SUBSCRIBE NEWSLETTER</h4>
-              <p className='fs-5'>Get all the latest information on Events, Sales and Offers.</p>
-              <div className='px-2 px-md-5'>
-                <input className='w-75 p-1' placeholder='Email address' type="email"></input>
-                <button style={{backgroundColor:"#0074D9", color:"#fff"}} className='w-25 p-1 fw-bold' >Subscribe</button>
-              </div>
-            </div>
-          </Row>
-          <Row>
-            <div className='text-center py-3 d-flex flex-column'>
-              <p style={{color:"#fff", margin:"0"}}>&copy; Copyrights Carslk - All Rights Reserved | Designed by <span style={{color:"#0074D9"}}>Abobakr Almashhor</span>.</p>
-              <div className='d-flex gap-3 justify-content-center fs-2'>
-                <a href='https://www.linkedin.com/in/abobakr-almashhor/' target='_blank'><FontAwesomeIcon icon={faLinkedin} style={{color: "#0074D9",}} /></a>
-                <a href='https://www.facebook.com/profile.php?id=100068290724398' target='_blank'><FontAwesomeIcon icon={faSquareFacebook} style={{color: "#0074D9",}} /></a>
-                <a href='https://github.com/ab0bakr1' target='_blank'><FontAwesomeIcon icon={faSquareGithub} style={{color: "#0074D9",}} /></a>
-              </div>
-            </div>
-          </Row>
-        </Container>
-    </footer>
-  )
-}
+    return (
+        <footer className="main-footer">
+            <Container>
+                <Row className="gy-5 pb-5 border-bottom border-secondary border-opacity-25">
+                    {/* عمود الشركة */}
+                    <Col lg={4} md={12} className="footer-about">
+                        <div className="footer-logo d-flex align-items-center gap-3 mb-4">
+                            <img src={logo} alt="Carslk Logo" className="footer-img" />
+                            <h2 className="m-0 fw-bold text-white">Carslk</h2>
+                        </div>
+                        <p className="footer-text">
+                            Car rental has never been easier. With our company, you can book your car online, via phone, or through our dedicated app with just a few clicks.
+                        </p>
+                        <div className="social-icons d-flex gap-3 mt-4">
+                            <a href="#"><FontAwesomeIcon icon={faFacebook} /></a>
+                            <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
+                            <a href="#"><FontAwesomeIcon icon={faXTwitter} /></a>
+                        </div>
+                    </Col>
 
-export default Footer
+                    {/* روابط سريعة */}
+                    <Col lg={2} md={4} sm={6}>
+                        <h5 className="footer-title">Quick Links</h5>
+                        <ul className="footer-links list-unstyled">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Our Fleet</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </Col>
+
+                    {/* معلومات التواصل */}
+                    <Col lg={3} md={4} sm={6}>
+                        <h5 className="footer-title">Contact Info</h5>
+                        <ul className="contact-details list-unstyled">
+                            <li className="d-flex gap-2 mb-3">
+                                <FontAwesomeIcon icon={faEnvelope} className="text-primary" />
+                                <span>info@carslk.com</span>
+                            </li>
+                            <li className="d-flex gap-2 mb-3">
+                                <FontAwesomeIcon icon={faPhone} className="text-primary" />
+                                <span>+966 555 555 555</span>
+                            </li>
+                            <li className="d-flex gap-2 mb-3">
+                                <FontAwesomeIcon icon={faLocationDot} className="text-primary" />
+                                <span>1234 Woo, Lodo, USA</span>
+                            </li>
+                        </ul>
+                    </Col>
+
+                    {/* النشرة البريدية */}
+                    <Col lg={3} md={4}>
+                        <h5 className="footer-title">Newsletter</h5>
+                        <p className="small text-muted mb-4">Stay updated with our latest offers and luxury car releases.</p>
+                        <Form className="newsletter-form d-flex gap-2">
+                            <Form.Control 
+                                type="email" 
+                                placeholder="Email" 
+                                className="bg-dark border-secondary text-white"
+                            />
+                            <Button variant="primary">Join</Button>
+                        </Form>
+                    </Col>
+                </Row>
+
+                {/* حقوق النشر */}
+                <Row className="pt-4 pb-4">
+                    <Col md={6} className="text-center text-md-start">
+                        <p className="copyright mb-0 text-muted">
+                            &copy; 2026 <strong>Carslk</strong>. All Rights Reserved.
+                        </p>
+                    </Col>
+                    <Col md={6} className="text-center text-md-end">
+                        <div className="developer-info">
+                            Designed with ❤️ by <a href="https://github.com/ab0bakr1" className="text-primary text-decoration-none fw-bold">Abobakr Almashhor</a>
+                            <div className="dev-socials d-inline-flex gap-3 ms-3">
+                                <a href="https://github.com/ab0bakr1" className="text-white-50"><FontAwesomeIcon icon={faGithub} /></a>
+                                <a href="https://www.linkedin.com/in/abobakr-almashhor/" className="text-white-50"><FontAwesomeIcon icon={faLinkedin} /></a>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </footer>
+    );
+};
+
+export default Footer;

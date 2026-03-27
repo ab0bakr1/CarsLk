@@ -1,5 +1,5 @@
 import React from 'react'
-import Company2 from "./Company/Company"
+import AboutCompany from "./Company/AboutCompany"
 import Header from './header/Header'
 import Footer from './footer/Footer'
 
@@ -8,7 +8,8 @@ const Company = () => {
     <>
       <Header />
       <div style={{paddingTop:"10vh"}}>
-        <Company2 />
+        <AboutCompany />
+        
       </div>
       <Footer />
     </>

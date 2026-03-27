@@ -1,56 +1,59 @@
-import React from 'react'
+// Store.jsx
+import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import AllCars from "../../Data/AllCars.json"
 import CarsItem from './CarsItem'
 import Categroy from './slidbar/Categroy'
 import "./Store.css"
-import { useState } from 'react'
 
-const Store =() => {
-  const [category, setCategory] = useState("all");
-  const [filters, setFilters] = useState({
-    color: "all",
-    make: "all",
-    year: "all",
-  });
+const Store = () => {
+  const [filters, setFilters] = useState({ color: "all", make: "all", year: "all" });
+
   const handleFiltersChange = (event) => {
     const { name, value } = event.target;
-    setFilters((prevFilters) => ({
-      ...prevFilters,
-      [name]: value,
-    }));
+    setFilters(prev => ({ ...prev, [name]: value }));
   };
-  const filterCars = () => {
-    return AllCars.filter((car) => {
-      const matchColors = filters.color === "all" || filters.color === car.color;
-      const matchMake = filters.make === "all" || filters.make.toLowerCase() === car.make.toLowerCase();
-      const matchYear = filters.year === "all" || filters.year === car.year;
-      return  matchColors && matchMake && matchYear ;
-    });
-  };
+
+  const filteredCars = AllCars.filter((car) => {
+    return (filters.color === "all" || filters.color === car.color) &&
+           (filters.make === "all" || filters.make.toLowerCase() === car.make.toLowerCase()) &&
+           (filters.year === "all" || filters.year === car.year);
+  });
 
   return (
-      <section className="my-5">
-        <Container>
-          <div className="d-md-flex gap-2">
-            <div className="col-md-3">
-              <div className="Categroy">
-                <Categroy handleFiltersChange={handleFiltersChange}/>
+    <section className="store-section py-5">
+      <Container>
+        <div className="section-title mb-5">
+          <h2 className="fw-bold">Explore Our Fleet</h2>
+          <p className="text-muted small">{filteredCars.length} Cars available for you</p>
+        </div>
+        
+        <Row>
+          <Col md={3} className="mb-4">
+            <div className="filter-sidebar p-4 shadow-sm rounded-4 bg-white">
+              <h5 className="mb-4 fw-bold">Filters</h5>
+              <Categroy handleFiltersChange={handleFiltersChange}/>
+            </div>
+          </Col>
+          
+          <Col md={9}>
+            <Row xs={1} sm={2} lg={3} className="g-4">
+              {filteredCars.map((item) => (
+                <Col key={item.id}>
+                  <CarsItem {...item} />
+                </Col>
+              ))}
+            </Row>
+            {filteredCars.length === 0 && (
+              <div className="text-center py-5">
+                <h4>No cars match your filters.</h4>
               </div>
-            </div>
-            <div className="col-md-9 col-12 filter-container">
-              <Row md={2} sm={1} lg={4} className="g-2">
-                {filterCars().map((item) => (
-                  <Col key={item.id} className="filter-car" data-aos="flip-left">
-                    <CarsItem {...item} />
-                  </Col>
-                ))}
-              </Row>
-            </div>
-          </div>
-        </Container>
-      </section>
-    );
+            )}
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  );
 }
 
-export default Store
+export default Store;

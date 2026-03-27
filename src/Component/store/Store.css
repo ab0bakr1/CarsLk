@@ -1,38 +1,129 @@
-.Categroy{
-    padding-right: 10px;
-    border-right: 1px solid #3C3C3C;
-    position: sticky;
-    top: 10vh;
+/* Store.css & CarsItem.css combined */
+
+.store-section {
+    background-color: #f8f9fa;
 }
-.buy{
+
+.car-card {
+    border-radius: 20px !important;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+}
+
+.car-img-container {
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.car-card-img {
+    object-fit: contain;
+    height: 100%;
+}
+
+.fav-floating-btn {
     position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-    top: 200%;
-    background-color: #232323;
-    height: 400px;
-    width: 300px;
-    z-index: 900;
-    opacity: 1;
-    transition: 0.4s ease-in-out;
+    top: 15px;
+    right: 15px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    color: #666;
+    transition: all 0.3s;
 }
-.buy label{
-    color: #fff;
+
+.fav-floating-btn.active {
+    color: #dc3545;
 }
-.buy input{
-    border-color: rgb(255, 255, 255);
-    background-color: #e7e7e71d;
-    color: #fff;
-}
-.buy h6{
+
+.car-year-badge {
+    background-color: #e7f1ff;
     color: #0074D9;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-weight: 600;
 }
-@media (max-width:995px) {
-    .Categroy{
-        border-right: none !important; 
-        border-bottom: 1px solid #3C3C3C;
-        margin-bottom: 20px;
+
+.car-price-tag {
+    font-weight: 800;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.buy-btn {
+    border-radius: 12px;
+    background-color: #0074D9;
+    border: none;
+    letter-spacing: 0.5px;
+}
+
+.filter-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.bg-primary-soft {
+    background-color: #eef6ff !important;
+    color: #0074D9;
+}
+
+/* تحسين شكل الفلاتر الجانبية */
+.filter-wrapper {
+    background: transparent;
+}
+
+.filter-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    display: block;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.filter-group {
+    transition: all 0.3s ease;
+}
+
+/* تنسيق القوائم المنسدلة (Select) إذا كانت موجودة داخل المكونات الفرعية */
+.filter-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.filter-group select:focus {
+    border-color: #0074D9;
+    background-color: #fff;
+}
+
+@media (max-width: 992px) {
+    .filter-wrapper .row {
+        flex-direction: row !important; /* اجعل الفلاتر بجانب بعضها في الموبايل */
+        overflow-x: auto; /* اسمح بالتمرير الأفقي إذا زادت الفلاتر */
+        padding-bottom: 10px;
+    }
+    
+    .filter-group {
+        min-width: 150px;
     }
 }

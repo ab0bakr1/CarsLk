@@ -1,13 +1,70 @@
-.colors{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    row-gap: 20px;
-    column-gap: 50px;
+/* Colors.css */
+
+.colors-filter-wrapper {
+    padding: 10px 0;
 }
-.color-icon{
-    border-radius: 50px;
-    height: 20px;
-    width: 20px;
-    border: 1px #00000035 solid;
+
+.color-swatches {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* عمودين متساويين */
+    gap: 12px;
+}
+
+.color-btn {
+    border: 1px solid #eee;
+    background-color: #fff;
+    padding: 8px 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.color-btn:hover {
+    border-color: #0074D9;
+    background-color: #f0f7ff;
+    transform: translateY(-2px);
+}
+
+.swatch-circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.color-name-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.all-colors {
+    grid-column: span 2; /* زر الكل يأخذ العرض كاملاً */
+    justify-content: center;
+    font-weight: 700;
+    color: #0074D9;
+    background-color: #f8f9fa;
+}
+
+/* تأثير عند اختيار اللون */
+.color-btn:focus {
+    border-color: #0074D9;
+    box-shadow: 0 0 0 3px rgba(0, 116, 217, 0.1);
+}
+
+/* تعديلات الموبايل */
+@media (max-width: 992px) {
+    .color-swatches {
+        grid-template-columns: repeat(3, 1fr); /* 3 أعمدة في الموبايل لتقليل الطول */
+    }
+    .all-colors {
+        grid-column: span 3;
+    }
+    .color-name-text {
+        font-size: 0.8rem;
+    }
 }

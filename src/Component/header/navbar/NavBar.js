@@ -1,32 +1,41 @@
+// NavBar.jsx
 import React, { useState } from "react";
 import './NavBar.css'
-import { Nav, Overlay } from "react-bootstrap";
-import {NavLink} from "react-router-dom"
+import { Nav } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
-    const [NavMenu , setNavMenu] = useState("nav-menu");
-    const [navBtnToggle, setNavBtnToggle] = useState("nav-btn");
-    const [Overlay, setOverlay] = useState("overlay");
-    const navBtn  =()=>{
-        NavMenu === "nav-menu" ? setNavMenu("nav-menu active") : setNavMenu("nav-menu");
-        navBtnToggle === "nav-btn" ? setNavBtnToggle ("nav-btn active") : setNavBtnToggle("nav-btn");
-        Overlay === "overlay" ? setOverlay ("overlay active") : setOverlay("overlay");
-    }
-    return(
-        <div className="nav align-items-center position-relative">
-            <button onClick={navBtn} className={navBtnToggle}>
-                <span></span>
-                <span></span>
-                <span></span>
+    const [isActive, setIsActive] = useState(false);
+
+    const toggleMenu = () => {
+        setIsActive(!isActive);
+    };
+
+    return (
+        <nav className="main-nav d-flex align-items-center">
+            {/* زر الهامبرغر المطور */}
+            <button 
+                onClick={toggleMenu} 
+                className={`nav-btn-modern ${isActive ? "active" : ""}`}
+                aria-label="Toggle navigation"
+            >
+                <span className="line"></span>
+                <span className="line"></span>
+                <span className="line"></span>
             </button>
-            <ul className={NavMenu}>
-                <Nav.Link as={NavLink} to="/">home</Nav.Link>
-                <Nav.Link as={NavLink} to="/Cars">Cars</Nav.Link>
-                <Nav.Link as={NavLink} to="/Company">Company</Nav.Link>
-                <Nav.Link as={NavLink} to="/Contact">contact</Nav.Link>
+
+            {/* الروابط */}
+            <ul className={`nav-links-container ${isActive ? "active" : ""}`}>
+                <li><Nav.Link as={NavLink} to="/" onClick={() => setIsActive(false)}>Home</Nav.Link></li>
+                <li><Nav.Link as={NavLink} to="/Cars" onClick={() => setIsActive(false)}>Cars</Nav.Link></li>
+                <li><Nav.Link as={NavLink} to="/Company" onClick={() => setIsActive(false)}>Brands</Nav.Link></li>
+                <li><Nav.Link as={NavLink} to="/Contact" onClick={() => setIsActive(false)}>Contact</Nav.Link></li>
             </ul>
-            <div className={Overlay} onClick={navBtn}></div>
-        </div>
-    )
+
+            {/* الغطاء الخلفي عند فتح القائمة في الموبايل */}
+            {isActive && <div className="nav-overlay" onClick={toggleMenu}></div>}
+        </nav>
+    );
 }
+
 export default NavBar;

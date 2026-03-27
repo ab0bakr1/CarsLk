@@ -1,70 +1,106 @@
-.contact{
+/* Contact.css */
+
+.contact-section {
+    background-color: #0b0b0b; /* أسود فحمي بدلاً من الأسود الصرف */
+    padding-block: 80px;
+}
+
+/* بطاقات المعلومات */
+.contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateX(10px);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: #0074D9;
+    color: white;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid #3C3C3C;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 12px;
 }
-.contact form{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 50%;
-}
-.contact form input{
-    padding: 5px 5px;
-    border-radius: 5px;
-    border-color: rgb(255, 255, 255);
-    background-color: #e7e7e71d;
-    color: #fff;
-}
-.contact form textarea{
-    border-color: rgb(255, 255, 255);
-    background-color: #e7e7e71d;
-    color: #fff;
-}
-.contact form button{
-    text-transform: capitalize;
-    border-radius: 5px;
-    padding-block: 4px;
-    border-color: rgb(255, 255, 255);
-    background-color: #0074D9;
-    color: #fff;
-}
-.contact .contact-item{
-    display:flex ;
-    flex-direction: column;
-    gap: 80px;
-    padding-left: 20px;
-    margin-block: auto;
-}
-.contact .contact-item svg{
-    padding-inline: 20px;
-}
-.contact .contact-item h2{
-    font-size: 30px;
-    color: #e7e7e7d6;
-}
-.contact .contact-item span{
+
+.contact-card h5 {
+    color: #0074D9;
+    margin-bottom: 5px;
     font-weight: bold;
-    letter-spacing: 1px;
-    color: #fff;
 }
-@media (max-width:995px) {
-    .contact{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
+
+.contact-card p {
+    color: #ccc;
+    margin: 0;
+}
+
+/* النموذج الزجاجي */
+.form-glass-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-input {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    padding: 15px 20px !important;
+    border-radius: 12px !important;
+    transition: 0.3s !important;
+}
+
+.custom-input:focus {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: #0074D9 !important;
+    box-shadow: 0 0 15px rgba(0, 116, 217, 0.3) !important;
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.send-btn {
+    background-color: #0074D9 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background-color: #0056b3 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 116, 217, 0.4);
+}
+
+/* الموبايل */
+@media (max-width: 991px) {
+    .contact-card {
+        padding: 15px;
     }
-    .contact form{
-        width: 100%;
-    }
-    .contact .contact-item{
-        gap: 50px;
-    }
-    .contact .contact-item{
-        padding-left: 0;
-        gap: 20px;
-    }
-    .contact .contact-item h2{
-        font-size: 20px;
+    .icon-box {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
     }
 }

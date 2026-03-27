@@ -1,93 +1,115 @@
-.nav ul{
+/* NavBar.css */
+
+.main-nav {
+    position: relative;
+}
+
+.nav-links-container {
     display: flex;
-    gap: 60px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    font-weight: 700;
-    text-transform: uppercase;
+    gap: 40px;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
-.nav ul a{
-    color: #0074D9;
+
+/* تنسيق الروابط */
+.nav-links-container a {
+    color: #333 !important; /* لون داكن عصري بدلاً من الأزرق الفاقع */
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
     text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
 }
-.nav ul a:hover{
-    text-shadow: 0px 0px 10px #0074D9;
-}
-.nav-btn{
-    display: none;
-    width: 50px;
-    height: 40px;
+
+/* تأثير الخط السفلي عند التحويم والارتباط النشط */
+.nav-links-container a::after {
+    content: '';
     position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
     left: 0;
-    background:none;
-    border: none;
+    background-color: #0074D9;
+    transition: width 0.3s ease;
 }
-.nav-btn span{
-    display: block;
+
+.nav-links-container a:hover::after,
+.nav-links-container a.active::after {
     width: 100%;
-    height: 5px;
-    background-color: #fff;
-    transition: ease-in-out 0.3s;
-    position: absolute;
-    left: 0;
-    top: 20px;
 }
-.nav-btn span:nth-child(1){
-    transform: translateY(-20px);
+
+.nav-links-container a:hover,
+.nav-links-container a.active {
+    color: #0074D9 !important;
 }
-.nav-btn span:nth-child(3){
-    transform: translateY(20px);
+
+/* زر القائمة (Hamburger) */
+.nav-btn-modern {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
 }
-@media (max-width:992px) {
-    .nav ul{
+
+.nav-btn-modern .line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+}
+
+/* شاشة الموبايل (أقل من 992px) */
+@media (max-width: 992px) {
+    .nav-btn-modern {
         display: flex;
-        flex-direction: column;
+    }
+
+    .nav-links-container {
         position: fixed;
-        z-index: 101;
-        background-color: #3c3c3c;
-        width: 250px;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 280px;
+        background-color: #fff;
+        flex-direction: column;
+        padding: 100px 30px;
+        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 1000;
+        box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+    }
+
+    .nav-links-container.active {
         left: 0;
-        top: 80px;
-        height: 100%;
-        gap: 10px;
-        letter-spacing: 2px;
-        font-size: 25px;
-        text-align: center;
-        transform: translateX(-100%);
-        transition: all 0.3s ease-in-out;
     }
-    .nav ul a{
-        padding: 10px 0;
+
+    .nav-links-container a {
+        font-size: 22px;
     }
-    .nav ul a:nth-child(1){
-        padding-top: 30px;
-    }
-    .nav .nav-menu.active{
-        transform: translateX(0%) !important ;
-    }
-    .nav-btn{
-        display: block;
-        z-index: 101;
-    }
-    .nav .nav-btn.active span:nth-child(1){
-        transform: rotate(220deg);
-    }
-    .nav .nav-btn.active span:nth-child(2){
-        width: 0px;
-    }
-    .nav .nav-btn.active span:nth-child(3){
-        transform: rotate(-220deg);
-    }
-    .overlay.active{
-        display: block;
-        position:fixed;
-        z-index:100;
-        left:0;
-        top:0;
-        background:#000000b8;
-        height:100%;
+
+    /* تحويل الهامبرغر إلى X عند التفعيل */
+    .nav-btn-modern.active .line:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+    .nav-btn-modern.active .line:nth-child(2) { opacity: 0; }
+    .nav-btn-modern.active .line:nth-child(3) { transform: rotate(-45deg) translate(5px, -7px); }
+
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(4px); /* تأثير زجاجي عصري */
+        z-index: 999;
     }
 }

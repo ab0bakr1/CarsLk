@@ -1,11 +1,57 @@
-.clients{
-    justify-content: space-between;
+/* Clients.css */
+
+.clients-section {
+    background-color: #ffffff; /* تغيير الخلفية الرمادية إلى بيضاء نظيفة */
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
-.clients img{
-    width: 10%;
+
+.section-header h2 {
+    color: #333;
+    font-size: 2rem;
+    position: relative;
 }
-@media (max-width:500px) {
-    .clients img{
-        width: 20%;  
-    }  
+
+.title-line {
+    width: 60px;
+    height: 4px;
+    background-color: #0074D9; /* لون الهوية الخاص بك */
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+.client-logo-wrapper {
+    padding: 20px;
+    transition: all 0.4s ease;
+    filter: grayscale(100%); /* الشعارات تبدأ بلون رمادي هادئ */
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px; /* لضمان تناسق الصفوف */
+}
+
+.client-logo-wrapper:hover {
+    filter: grayscale(0%); /* استعادة الألوان عند التحويم */
+    opacity: 1;
+    transform: scale(1.1); /* تكبير بسيط */
+}
+
+.client-img {
+    max-height: 60px; /* توحيد ارتفاع الشعارات */
+    width: auto;
+    object-fit: contain;
+}
+
+/* تعديلات للموبايل */
+@media (max-width: 768px) {
+    .client-logo-wrapper {
+        filter: grayscale(0%); /* في الموبايل تظهر الألوان مباشرة لسهولة الرؤية */
+        opacity: 0.8;
+        padding: 10px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
 }

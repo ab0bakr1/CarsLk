@@ -1,35 +1,39 @@
-import React from 'react'
-import { Container, Row } from 'react-bootstrap'
-import client from "../../IMG/client.png"
-import client2 from "../../IMG/client2.png"
-import client3 from "../../IMG/client3.png"
-import client4 from "../../IMG/cliemt4.png"
-import client5 from "../../IMG/client5.png"
-import client6 from "../../IMG/logo-removebg-preview.png"
-import client7 from "../../IMG/مخلخ.png"
-import "./Clients.css"
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import "./Clients.css";
+
+// استيراد الصور (تأكد من صحة المسارات)
+import client1 from "../../IMG/client.png";
+import client2 from "../../IMG/client2.png";
+import client3 from "../../IMG/client3.png";
+import client4 from "../../IMG/cliemt4.png";
+import client5 from "../../IMG/client5.png";
+import client6 from "../../IMG/logo-removebg-preview.png";
+import client7 from "../../IMG/مخلخ.png";
 
 const Clients = () => {
-  return (
-    <>
-        <section className='py-5' style={{backgroundColor: '#797979'}}>
-            <Container >
-                <div class="container-fluid pb-5 m-auto">
-                    <h1 id="clientes" align="center"><strong><font color="#483D8B">CLIENTES</font></strong></h1>
-                </div>
-                <Row data-aos="fade-up" className='clients d-flex' sm={2} md={3} lg={7}>
-                    <img src={client}></img>
-                    <img src={client2}></img>
-                    <img src={client3}></img>
-                    <img src={client4}></img>
-                    <img src={client5}></img>
-                    <img src={client6}></img>
-                    <img src={client7}></img>
-                </Row>
-            </Container>    
-        </section>
-    </>
-  )
-}
+    const clientLogos = [client1, client2, client3, client4, client5, client6, client7];
 
-export default Clients
+    return (
+        <section className='clients-section py-5'>
+            <Container>
+                <div className="section-header text-center mb-5">
+                    <h2 className="fw-bold text-uppercase letter-spacing-2">Our Trusted Clients</h2>
+                    <div className="title-line mx-auto"></div>
+                </div>
+
+                <Row className='justify-content-center align-items-center g-4'>
+                    {clientLogos.map((logo, index) => (
+                        <Col key={index} xs={7} sm={4} md={3} lg={2} className="text-center" data-aos="zoom-in">
+                            <div className="client-logo-wrapper">
+                                <img src={logo} alt={`Client ${index + 1}`} className="img-fluid client-img" />
+                            </div>
+                        </Col>
+                    ))}
+                </Row>
+            </Container>
+        </section>
+    );
+};
+
+export default Clients;

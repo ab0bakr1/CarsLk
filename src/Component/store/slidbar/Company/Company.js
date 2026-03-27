@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Company.css"
+// استيراد الصور (ابقِ عليها كما هي)
 import BMW from "../../../../IMG/BMW.png";
 import Tesla from "../../../../IMG/Tesla.png";
 import Chevrolet from "../../../../IMG/Chevrolet.png";
@@ -14,27 +15,50 @@ import Cadillac from "../../../../IMG/Cadillac.png";
 import Ford from "../../../../IMG/Ford.png";
 import RollsRoyce from "../../../../IMG/Rolls-Royce.png"
 
-
 const Company = ({ handleFiltersChange }) => {
+  const companies = [
+    { name: 'JEEP', img: JEEP },
+    { name: 'Audi', img: Audi },
+    { name: 'Hyundai', img: Hyundai },
+    { name: 'Toyota', img: Toyota },
+    { name: 'Mercedes', img: Mercedes },
+    { name: 'Chevrolet', img: Chevrolet },
+    { name: 'Tesla', img: Tesla },
+    { name: 'BMW', img: BMW },
+    { name: 'Lexus', img: Lexus },
+    { name: 'Honda', img: Honda },
+    { name: 'Ford', img: Ford },
+    { name: 'Cadillac', img: Cadillac },
+    { name: 'Rolls-Royce', img: RollsRoyce },
+  ];
+
   return (
-    <>
-        <h4 className='my-3 text-uppercase'>Company</h4>
-        <div className="Companys">
-            <button onClick={handleFiltersChange} name='make' value='JEEP' className='d-flex align-items-center gap-1 border-0 bg-transparent fs-5'><img src={JEEP} className='Company-icon'></img>JEEP</button>
-            <button onClick={handleFiltersChange} name="make" value="Audi" className='d-flex align-items-center gap-1 border-0 bg-transparent fs-5'><img src={Audi} className='Company-icon'></img>Audi</button>
-            <button onClick={handleFiltersChange} name="make" value="Hyundai" className='d-flex align-items-center gap-1 border-0 bg-transparent fs-5'><img src={Hyundai} className='Company-icon'></img>Hyundai</button>
-            <button onClick={handleFiltersChange} name="make" value="Toyota" className='d-flex align-items-center gap-1 border-0 bg-transparent fs-5'><img src={Toyota} className='Company-icon'></img>Toyota</button>
-            <button onClick={handleFiltersChange} name="make" value="Mercedes" className='d-flex align-items-center gap-1 border-0 bg-transparent fs-5'><img src={Mercedes} className='Company-icon'></img>Mercedes</button>
-            <button onClick={handleFiltersChange} name="make" value="Chevrolet" className='d-flex align-items-center gap-1 border-0 bg-transparent fs-5'><img src={Chevrolet} className='Company-icon'></img>Chevrolet</button>
-            <button onClick={handleFiltersChange} name="make" value="Tesla" className='d-flex align-items-center gap-1 border-0 bg-transparent fs-5'><img src={Tesla} className='Company-icon'></img>Tesla</button>
-            <button onClick={handleFiltersChange} name="make" value="BMW" className='d-flex align-items-center gap-1 border-0 bg-transparent fs-5'><img src={BMW} className='Company-icon'></img>BMW</button>
-            <button onClick={handleFiltersChange} name="make" value="Lexus" className='d-flex align-items-center gap-1 border-0 bg-transparent fs-5'><img src={Lexus} className='Company-icon'></img>Lexus</button>
-            <button onClick={handleFiltersChange} name="make" value="Honda" className='d-flex align-items-center gap-1 border-0 bg-transparent fs-5'><img src={Honda} className='Company-icon'></img>Honda</button>
-            <button onClick={handleFiltersChange} name="make" value="Ford" className='d-flex align-items-center gap-1 border-0 bg-transparent fs-5'><img src={Ford} className='Company-icon'></img>Ford</button>
-            <button onClick={handleFiltersChange} name="make" value="Cadillac" className='d-flex align-items-center gap-1 border-0 bg-transparent fs-5'><img src={Cadillac} className='Company-icon'></img>Cadillac</button>
-            <button onClick={handleFiltersChange} name="make" value="Rolls-Royce" className='d-flex align-items-center gap-1 border-0 bg-transparent fs-5'><img src={RollsRoyce} className='Company-icon'></img>Rolls-Royce</button>
-        </div>
-    </>
+    <div className="company-filter-section">
+      <div className="company-list">
+        {/* زر All للعودة لكل الشركات */}
+        <button 
+          onClick={handleFiltersChange} 
+          name="make" 
+          value="all" 
+          className='company-item all-btn'
+        >
+          All Brands
+        </button>
+
+        {companies.map((brand) => (
+          <button 
+            key={brand.name}
+            onClick={handleFiltersChange} 
+            name='make' 
+            value={brand.name} 
+            className='company-item'
+          >
+            <img src={brand.img} alt={brand.name} className='brand-logo' />
+            <span className="brand-name">{brand.name}</span>
+          </button>
+        ))}
+      </div>
+    </div>
   )
 }
 
