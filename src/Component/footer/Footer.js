@@ -21,9 +21,9 @@ const Footer = () => {
                             Car rental has never been easier. With our company, you can book your car online, via phone, or through our dedicated app with just a few clicks.
                         </p>
                         <div className="social-icons d-flex gap-3 mt-4">
-                            <a href="#"><FontAwesomeIcon icon={faFacebook} /></a>
-                            <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
-                            <a href="#"><FontAwesomeIcon icon={faXTwitter} /></a>
+                            <a href="/"><FontAwesomeIcon icon={faFacebook} /></a>
+                            <a href="/"><FontAwesomeIcon icon={faInstagram} /></a>
+                            <a href="/"><FontAwesomeIcon icon={faXTwitter} /></a>
                         </div>
                     </Col>
 
@@ -31,10 +31,10 @@ const Footer = () => {
                     <Col lg={2} md={4} sm={6}>
                         <h5 className="footer-title">Quick Links</h5>
                         <ul className="footer-links list-unstyled">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Our Fleet</a></li>
-                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="/">About Us</a></li>
+                            <li><a href="/">Contact Us</a></li>
+                            <li><a href="/">Our Fleet</a></li>
+                            <li><a href="/">Terms of Service</a></li>
                         </ul>
                     </Col>
 
