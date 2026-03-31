@@ -46,11 +46,6 @@ function User() {
     }
   };
 
-  const handleLogout = () => {
-    setUserName("");
-    // اختياري: localStorage.clear();
-  };
-
   return (
     <>
       <div className='user-trigger' onClick={handleShow}>
